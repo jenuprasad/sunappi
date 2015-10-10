@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidLibs.iml" filepath="$PROJECT_DIR$/AndroidLibs.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sunappi.iml" filepath="$PROJECT_DIR$/sunappi.iml" />
     </modules>
   </component>
 </project>

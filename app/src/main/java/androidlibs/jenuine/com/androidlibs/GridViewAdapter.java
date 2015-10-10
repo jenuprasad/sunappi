@@ -47,17 +47,17 @@ public class GridViewAdapter extends ArrayAdapter<String> {
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new ViewHolder();
             holder.imageView = (ImageView) row.findViewById(R.id.grid_item_image);
+            holder.bg_image = (ImageView) row.findViewById(R.id.bg_image);
             row.setTag(holder);
         } else {
             holder = (ViewHolder) row.getTag();
         }
-
-
         Picasso.with(mContext).load(mGridData.get(position)).into(holder.imageView);
         return row;
     }
 
     static class ViewHolder {
-        ImageView imageView;
+        public ImageView imageView;
+        public ImageView bg_image;
     }
 }

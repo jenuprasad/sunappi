@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="androidlibs.jenuine.com.androidlibs" >
-<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    package="androidlibs.jenuine.com.androidlibs">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/MobileID" >
+        android:theme="@style/MobileID">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:launchMode="singleInstance"
+            android:alwaysRetainTaskState="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Declaring Service in Manifest -->
+        <service
+            android:name=".DownloadService"
+            android:exported="false" />
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="99981cea079da7fefc16730c7e1a1e9e35db022a" />
